@@ -1,0 +1,102 @@
+
+body {
+  background-image: url(media/bg.gif);
+  object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+
+
+.social {
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  display: flex;
+  margin: 0 auto;
+  padding: 5px 10px;
+  object-fit: cover;
+  position: absolute;
+  border-radius: 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-position: center center;
+  transform: translate(-50%, -50%);
+  background-position: center center;
+
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, .4);
+}
+
+#volume {
+  -webkit-appearance: none;
+  top: 60%;
+  left: 50%;
+  z-index: 2;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  height: 8px;
+  border-radius: 15px;
+  background: #A3316B;
+  transition: ease-out .1s;
+}
+
+#volume:hover {
+  transition: ease-in .2s;
+  background: #7A2551;
+}
+
+#volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#volume::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#myCanvas {
+  height: 100vh;
+  width: 100%;
+  z-index: 2;
+  position: absolute;
+}
+
+
+
+@media(max-width: 768px) {
+
+  body {
+    height: 100vh;
+    object-fit: cover;
+    margin: 0 !important;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    min-height: -webkit-fill-available;
+  }
+
+  #enter {
+    display: none;
+  }
+
+  #main {
+    display: block;
+  }
+
+  #volume {
+    display: none;
+  }
+
+}
